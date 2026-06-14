@@ -1,0 +1,27 @@
+# A TOML plugin for proto:
+# https://moonrepo.dev/docs/proto/plugins#toml-plugin
+
+name = "grype"
+type = "cli"
+
+[platform.linux]
+download-file = "grype_0.114.0_linux_amd64.tar.gz"
+checksum-file = "grype_0.114.0_checksums.txt"
+
+[platform.macos]
+download-file = "grype_0.114.0_darwin_amd64.tar.gz"
+checksum-file = "grype_0.114.0_checksums.txt"
+
+[platform.windows]
+download-file = "grype_0.114.0_windows_amd64.zip"
+checksum-file = "grype_0.114.0_checksums.txt"
+
+[install]
+checksum-url = "https://github.com/anchore/grype/releases/download/v0.114.0/grype_0.114.0_checksums.txt"
+download-url = "https://github.com/anchore/grype/releases/download/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "arm64"
+
+[resolve]
+git-url = "https://github.com/anchore/grype"
