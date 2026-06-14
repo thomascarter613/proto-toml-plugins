@@ -1,0 +1,19 @@
+# A TOML plugin for proto:
+# https://moonrepo.dev/docs/proto/plugins#toml-plugin
+
+name = "opentofu"
+type = "cli"
+
+[platform.linux]
+download-file = "tofu_1.12.2_linux_amd64.tar.gz"
+checksum-file = "tofu_1.12.2_linux_amd64.zip.sig"
+
+[install]
+checksum-url = "https://github.com/opentofu/opentofu/releases/download/v1.12.2/tofu_1.12.2_linux_amd64.tar.gz.sig"
+download-url = "https://github.com/opentofu/opentofu/releases/download/v1.12.2/tofu_1.12.2_linux_amd64.tar.gz"
+
+[install.arch]
+aarch64 = "arm64"
+
+[resolve]
+git-url = "https://github.com/opentofu/opentofu"
