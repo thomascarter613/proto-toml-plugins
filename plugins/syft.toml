@@ -1,0 +1,19 @@
+# A TOML plugin for proto:
+# https://moonrepo.dev/docs/proto/plugins#toml-plugin
+
+name = "syft"
+type = "cli"
+
+[platform.linux]
+download-file = "syft_1.45.1_linux_amd64.tar.gz"
+checksum-file = "syft_1.45.1_checksums.txt"
+
+[install]
+checksum-url = "https://github.com/anchore/syft/releases/download/v1.45.1/syft_1.45.1_checksums.txt"
+download-url = "https://github.com/anchore/syft/releases/download/v1.45.1/syft_1.45.1_linux_amd64.tar.gz"
+
+[install.arch]
+aarch64 = "arm64"
+
+[resolve]
+git-url = "https://github.com/anchore/syft"
